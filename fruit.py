@@ -6,16 +6,6 @@ from keras.models import load_model
 import requests
 from bs4 import BeautifulSoup
 
-st.session_state['answer'] = ''!
-
-st.write(st.session_state)
-
-realans = ['', 'abc', 'edf']
-
-if  st.session_state['answer'] in realans:
-    answerStat = "correct"
-elif st.session_state['answer'] not in realans:
-    answerStat = "incorrect"
         
 model = load_model('fruit.hdf5')
 

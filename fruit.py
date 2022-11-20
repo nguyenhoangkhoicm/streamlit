@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 st.session_state['answer'] = ''
 if st.session_state['answer'] in realans:
         answerStat = "correct"
-else st.session_state['answer'] not in realans:
+else:
         answerStat = "incorrect"
         
 model = load_model('fruit.hdf5')

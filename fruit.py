@@ -1,7 +1,7 @@
 import streamlit as st
-from keras import keras_preprocessing
+
 from PIL import Image
-from keras_preprocessing.image import load_img,img_to_array
+from keras import load_img,img_to_array
 import numpy as np
 from keras.models import load_model
 import requests

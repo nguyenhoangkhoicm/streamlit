@@ -1,26 +1,24 @@
 import streamlit as st
 
 from PIL import Image
-from tensorflow.keras.utils import load_img
-from tensorflow.keras.utils import img_to_array
+from keras_preprocessing.image import load_img,img_to_array
 import numpy as np
 from keras.models import load_model
 import requests
 from bs4 import BeautifulSoup
 
-# st.session_state['answer'] = ''
+st.session_state['answer'] = ''
+st.write(st.session_state)
 
-# st.write(st.session_state)
+realans = ['', 'abc', 'edf']
 
-# realans = ['', 'abc', 'edf']
+if  st.session_state['answer'] in realans:
+    answerStat = "correct"
+elif st.session_state['answer'] not in realans:
+    answerStat = "incorrect"
 
-# if  st.session_state['answer'] in realans:
-#     answerStat = "correct"
-# elif st.session_state['answer'] not in realans:
-#     answerStat = "incorrect"
-
-# st.write(st.session_state)
-# st.write(answerStat)
+st.write(st.session_state)
+st.write(answerStat)
         
 model = load_model('fruit.hdf5')
 

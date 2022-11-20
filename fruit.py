@@ -7,7 +7,7 @@ from keras.models import load_model
 import requests
 from bs4 import BeautifulSoup
 
-st.session_state['answer'] = ''!
+st.session_state['answer'] = ''
 
 st.write(st.session_state)
 

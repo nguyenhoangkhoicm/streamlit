@@ -6,6 +6,13 @@ from keras.models import load_model
 import requests
 from bs4 import BeautifulSoup
 
+ st.session_state['answer'] = ''
+
+ if  st.session_state['answer'] in realans:
+        answerStat = "correct"
+    elif st.session_state['answer'] not in realans:
+        answerStat = "incorrect"
+        
 model = load_model('fruit.hdf5')
 
 labels = {0: 'Trai_bo', 1: 'Trai_cam', 2: 'Trai_chuoi', 3: 'Trai_dao', 4: 'Trai_tao'}
